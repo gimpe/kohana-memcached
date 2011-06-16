@@ -1,3 +1,7 @@
+WORK IN PROGRESS FIRST VERSION AVAILABLE SOON 
+=============================================
+
+
 kohana-memcached
 ===============
 
