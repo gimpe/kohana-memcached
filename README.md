@@ -4,7 +4,7 @@ kohana-memcached
 Kohana 3.1 module for memcached extension (not memcache).
 
 
-see [config file](https://github.com/gimpe/kohana-memcached/blob/master/classes/kohana/cache/memcached.php) for details.
+see [config file](https://github.com/gimpe/kohana-memcached/blob/master/config/cache.php) for details.
 
 License:
 --------
