@@ -1,12 +1,10 @@
-WORK IN PROGRESS FIRST VERSION AVAILABLE SOON 
-=============================================
-
-
 kohana-memcached
 ===============
 
 Kohana 3.1 module for memcached extension (not memcache).
 
+
+see [config file](https://github.com/gimpe/kohana-memcached/blob/master/classes/cache/kohana/memcached.php) for details.
 
 License:
 --------
