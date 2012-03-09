@@ -1,7 +1,7 @@
 kohana-memcached
 ===============
 
-Kohana 3.1 module for memcached extension (not memcache).
+Kohana 3.2 module for memcached extension (not memcache).
 
 
 See [config file](https://github.com/gimpe/kohana-memcached/blob/master/config/cache.php).
