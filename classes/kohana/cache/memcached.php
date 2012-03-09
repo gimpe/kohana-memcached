@@ -74,10 +74,15 @@ class Kohana_Cache_Memcached extends Cache
             $host   = Arr::get($server, 'host');
             $port   = Arr::get($server, 'port', NULL);
             $weight = Arr::get($server, 'weight', NULL);
+            $status = Arr::get($server, 'status', TRUE);
 
             if (!empty($host))
             {
-                $this->memcached_instance->addServer($host, $port, $weight);   
+                // status can be used by an external healthcheck to mark the memcached instance offline
+                if ($status === TRUE)
+                {
+                    $this->memcached_instance->addServer($host, $port, $weight);   
+                }
             }
             else
             {
@@ -108,16 +113,9 @@ class Kohana_Cache_Memcached extends Cache
     {
         $result = $this->memcached_instance->get($id);
 
-        if ($this->memcached_instance->getResultCode() == Memcached::RES_NOTFOUND)
+        if ($this->memcached_instance->getResultCode() !== Memcached::RES_SUCCESS)
         {
             $result = $default;
-        }
-        else
-        {
-           Kohana::$log->add(Log::INFO, ':method: not found :id', array(
-               ':method' => __METHOD__,
-               ':id' => $id,
-               ));
         }
 
         return $result;
