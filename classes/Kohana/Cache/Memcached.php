@@ -2,7 +2,7 @@
 
 /**
  * Kohana_Cache_Memcached class
- * 
+ *
  * LICENSE: THE WORK (AS DEFINED BELOW) IS PROVIDED UNDER THE TERMS OF THIS
  * CREATIVE COMMONS PUBLIC LICENSE ("CCPL" OR "LICENSE"). THE WORK IS PROTECTED
  * BY COPYRIGHT AND/OR OTHER APPLICABLE LAW. ANY USE OF THE WORK OTHER THAN AS
@@ -21,7 +21,7 @@
  * @link      http://github.com/gimpe/kohana-memcached
  */
 class Kohana_Cache_Memcached extends Cache
-{ 
+{
     protected $memcached_instance;
 
     protected function __construct(array $config)
@@ -81,7 +81,7 @@ class Kohana_Cache_Memcached extends Cache
                 // status can be used by an external healthcheck to mark the memcached instance offline
                 if ($status === TRUE)
                 {
-                    $this->memcached_instance->addServer($host, $port, $weight);   
+                    $this->memcached_instance->addServer($host, $port, $weight);
                 }
             }
             else
@@ -91,16 +91,16 @@ class Kohana_Cache_Memcached extends Cache
             }
         }
     }
-    
+
     /**
      * Retrieve a cached value entry by id.
-     * 
+     *
      *     // Retrieve cache entry from default group
      *     $data = Cache::instance()->get('foo');
-     * 
+     *
      *     // Retrieve cache entry from default group and return 'bar' if miss
      *     $data = Cache::instance()->get('foo', 'bar');
-     * 
+     *
      *     // Retrieve cache entry from memcache group
      *     $data = Cache::instance('memcache')->get('foo');
      *
@@ -123,15 +123,15 @@ class Kohana_Cache_Memcached extends Cache
 
     /**
      * Set a value to cache with id and lifetime
-     * 
+     *
      *     $data = 'bar';
-     * 
+     *
      *     // Set 'bar' to 'foo' in default group, using default expiry
      *     Cache::instance()->set('foo', $data);
-     * 
+     *
      *     // Set 'bar' to 'foo' in default group for 30 seconds
      *     Cache::instance()->set('foo', $data, 30);
-     * 
+     *
      *     // Set 'bar' to 'foo' in memcache group for 10 minutes
      *     if (Cache::instance('memcache')->set('foo', $data, 600))
      *     {
@@ -151,10 +151,10 @@ class Kohana_Cache_Memcached extends Cache
 
     /**
      * Delete a cache entry based on id
-     * 
+     *
      *     // Delete 'foo' entry from the default group
      *     Cache::instance()->delete('foo');
-     * 
+     *
      *     // Delete 'foo' entry from the memcache group
      *     Cache::instance('memcache')->delete('foo')
      *
@@ -168,14 +168,14 @@ class Kohana_Cache_Memcached extends Cache
 
     /**
      * Delete all cache entries.
-     * 
+     *
      * Beware of using this method when
      * using shared memory cache systems, as it will wipe every
      * entry within the system for all clients.
-     * 
+     *
      *     // Delete all cache entries in the default group
      *     Cache::instance()->delete_all();
-     * 
+     *
      *     // Delete all cache entries in the memcache group
      *     Cache::instance('memcache')->delete_all();
      *

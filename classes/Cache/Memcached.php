@@ -2,7 +2,7 @@
 
 /**
  * Cache_Memcached class
- * 
+ *
  * LICENSE: THE WORK (AS DEFINED BELOW) IS PROVIDED UNDER THE TERMS OF THIS
  * CREATIVE COMMONS PUBLIC LICENSE ("CCPL" OR "LICENSE"). THE WORK IS PROTECTED
  * BY COPYRIGHT AND/OR OTHER APPLICABLE LAW. ANY USE OF THE WORK OTHER THAN AS
@@ -20,4 +20,6 @@
  * @license   http://creativecommons.org/licenses/by/3.0/ CC BY 3.0
  * @link      http://github.com/gimpe/kohana-memcached
  */
-class Cache_Memcached extends Kohana_Cache_Memcached {}
+class Cache_Memcached extends Kohana_Cache_Memcached
+{
+}
