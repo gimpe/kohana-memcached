@@ -185,4 +185,28 @@ class Kohana_Cache_Memcached extends Cache
     {
         return $this->memcached_instance->flush();
     }
+
+    /**
+     * Decrements cached value entry by $offset
+     *
+     * @param $id
+     * @param int $offset defaults to 1
+     * @return int
+     */
+    public function decrement($id, $offset = 1)
+    {
+        return $this->memcached_instance->decrement($id, $offset);
+    }
+
+    /**
+     * increments cached value entry by $offset
+     *
+     * @param $id
+     * @param int $offset defaults to 1
+     * @return int
+     */
+    public function increment($id, $offset = 1)
+    {
+        return $this->memcached_instance->delete($id, $offset);
+    }
 }
