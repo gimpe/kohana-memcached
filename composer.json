@@ -1,5 +1,5 @@
 {
-    "name": "gimpe/kohana-memcached",
+    "name": "kohana-memcached",
     "version": "3.3",
     "type": "kohana-module",
     "description": "Kohana 3.3 module for memcached extension",
