@@ -2,11 +2,11 @@
     "name": "gimpe/kohana-memcached",
     "version": "3.3",
     "description": "Kohana 3.3 module for memcached extension",
-    "type": "kohana-module"
+    "type": "kohana-module",
     "authors": [
         {
             "name": "gimpe",
-            "homepage": "https://github.com/gimpe/",
+            "homepage": "https://github.com/gimpe/"
         }
     ],
     "require": {
