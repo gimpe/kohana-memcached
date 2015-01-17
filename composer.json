@@ -1,0 +1,28 @@
+{
+    "name": "gimpe/kohana-memcached",
+    "version": "3.2",
+    "description": "Kohana 3.2 module for memcached extension",
+    "type": "kohana-module",
+    "authors": [
+        {
+            "name": "gimpe",
+            "homepage": "https://github.com/gimpe/"
+        }
+    ],
+    "require": {
+        "php": ">=5.3"
+    },
+    "minimum-stability": "stable",
+    "autoload": {
+        "classmap": [
+            "classes/"
+        ]
+    },
+    "extra": {
+        "installer-paths": {
+            "vendor/kohana/modules/{$name}/": [
+                "type:kohana-module"
+            ]
+        }
+    }
+}
